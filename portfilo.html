@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sty.css" />
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 100px;
+  background: #fff;
+  transition: 0.5;
+}
+.banner.night {
+  background-color: #333;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner::before {
+  content: " ";
+  position: absolute;
+  left: 30%;
+  top: 10%;
+  width: 150px;
+  height: 150px;
+  background: url(dot.png);
+  background-size: cover;
+  animation: animatedColor 10s linear infinite;
+  transition-delay: -5s;
+}
+header .logo {
+  color: #333;
+  font-size: 2em;
+  text-decoration: none;
+}
+header .logo span {
+  color: purple;
+}
+header ul {
+  display: flex;
+  gap: 40px;
+}
+header ul li {
+  list-style: none;
+}
+header ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 2em;
+}
+.content {
+  position: relative;
+  max-width: 700px;
+  z-index: 10;
+}
+.content h3 {
+  font-size: 2em;
+  color: #333;
+  font-weight: 200;
+  transition: 0.5s;
+}
+.content h2 {
+  font-size: 3em;
+  color: #333;
+  font-weight: 700;
+  transition: 0.5s;
+}
+.content span {
+  color: red;
+}
+.content p {
+  font-size: 1.2em;
+  color: #666;
+  margin: 10px 0;
+  transition: 0.5;
+}
+.content ul {
+  display: flex;
+  gap: 30px;
+  list-style-type: none;
+}
+.content ul li {
+  position: relative;
+  background: #650469;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 15px 25px;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  margin-right: 4px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.content button {
+  position: relative;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 15px 35px;
+  font-size: 1.5em;
+  letter-spacing: 0.05em;
+  margin-right: 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.objective {
+  position: absolute;
+  bottom: 80px;
+  justify-content: left;
+}
+.objective h4 {
+  justify-content: center;
+  text-indent: 80px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.content button.chat {
+  background: transparent;
+  color: #666;
+}
+.content button.chat ion-icon {
+  position: relative;
+  top: 5px;
+  color: red;
+  font-size: 1.5em;
+}
+.sci {
+  position: absolute;
+  bottom: 30px;
+  display: flex;
+  gap: 20px;
+}
+.sci li {
+  list-style-type: none;
+  font-size: 1.75em;
+  color: #333;
+}
+.daynight {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%);
+  width: 60px;
+  height: 60px;
+  color: #666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 2em;
+}
+.daynight :nth-child(2),
+.banner.night .daynight ion-icons:nth-child(1) {
+  display: none;
+}
+.banner.night .daynight ion-icons:nth-child(2) {
+  display: block;
+}
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content h3,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night .sci li a,
+.banner.night header ul li a,
+.banner.night .objective 
+{
+  color: #fff;
+}
+.colors {
+  position: absolute;
+  max-width: 1000px;
+  right: 140px;
+  height: 600px;
+  animation: animatedColor 8s ease-in-out infinite;
+}
+@keyframes animatedColor {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+.Awais {
+  position: absolute;
+  right: 120px;
+  top: 70px;
+  bottom: 0px;
+  width: 50vh;
+  animation: animatedAwais 8s ease-in-out infinite;
+}
+@keyframes animatedAwais {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+}
+
+    </style>
+    <title>Awais_Resume</title>
+  </head>
+  <body>
+    <section class="banner">
+      <header>
+        <a href="#" class="logo"><span>My</span>Portfolio_</a>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">work</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <h3>Hey_</h3>
+        <h2>I am <span id="text">Awais</span></h2>
+        <p>
+          Skills
+          <ul>
+          <li>Html</li>
+          <li>Css</li>
+          <li>javaScript</li>
+          <li>PHP</li>
+          <li>Python</li>
+          <li>Bootstrap</li>
+          </ul>
+        </p>
+        <button>Hire me</button>
+        <button class="chat">
+          <ion-icon name="chatbubbles-outline"></ion-icon>let's chat
+        </button>
+      </div>
+      <div class="objective">
+        <h2>Object:</h2>
+        <h4>Obtain a software engineer position in a<br>
+            dynamic and innovative organization<br>
+            where I can utilize my skills and<br>
+            knowledge to develop high-quality<br>
+            software solutions and contribute to the<br>
+            growth and success of the company.</h4>
+      </div>
+      <img src="./colors.png" class="colors" />
+      <img src="./Awais3.png" class="Awais" />
+      <ul class="sci">
+        <li>
+          <a href="https://www.linkedin.com/in/muhammad-awais-1756b321b/"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+        </li>
+        
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+      </ul>
+      <div class="daynight">
+        <ion-icon name="moon-outline"></ion-icon>
+        <ion-icon name="sunny-outline"></ion-icon>
+      </div>
+    </section>
+  </body>
+  <script
+    type="module"
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+  ></script>
+  <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed("#text",{
+      /**
+       * @property {array} strings strings to be typed
+       * @property {string} stringsElement ID of element containing string children
+       */
+      strings: ["Awais","a Software-Engineer", "a Web-Developer" ],
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 1000,
+    });
+
+    let banner = document.querySelector(".banner");
+    let daynight = document.querySelector(".daynight");
+    daynight.onclick = function () {
+      banner.classList.toggle("night");
+    };
+  </script>
+</html>
